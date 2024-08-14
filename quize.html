@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>hatiwarequiz</title>
+    <style>
+      header {
+        background-color: #00008B; /* 濃青色 */
+        color: white; /* 白色 */
+        padding: 20px;
+        text-align: center;
+      }
+      #correct-image, #incorrect-image {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+      }
+      .alert-box {
+        display: none;
+        position: fixed;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        z-index: 1000;
+        width: 80%;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="header-image"></div>
+      <h1>はちわれクイズ！</h1>
+    </header>
+
+    <div class="container">
+    
+        <div id="js-question" class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+
+        <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="ms-1 btn btn-primary">Primary</button>
+        <button type="button" class="ms-1 btn btn-primary">Primary</button>
+        <button type="button" class="ms-1 btn btn-primary">Primary</button>
+        </div>
+    </div>
+  
+    <img id="correct-image" src="seikai.jpg" alt="Correct Answer">
+    <img id="incorrect-image" src="huseikai.jpg" alt="Incorrect Answer">
+  
+    <div id="alert-box" class="alert alert-primary alert-box" role="alert">
+      <span id="alert-message"></span>
+    </div>
+    
+    <script src="quize.js"></script>
+
+  </body>
+</html>
